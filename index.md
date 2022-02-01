@@ -69,6 +69,18 @@ Attaque Format string
 
 Les attaquants modifient le déroulement d'une application en utilisant abusivement les fonctions de la bibliothèque de formatage des chaînes de caractères, comme printf et sprintf, pour accéder à d'autres espaces mémoire et les manipuler.
 
+## Quels outils peuvent nous aider à exploiter les buffers overflow ?
+
+
+Si l’attaquant n’a pas le code source du programme qu’il va attaquer il utilisera des outils de reverse engineering comme : binary ninja, Ghidra (outil de la NSA), IDA. 
+
+Souvent couplé avec des outils de fuzzing pour automatiser la découverte de bug dans le programme si celui-ci a une base de code très grandes : AFL, Libfuzzer.
+
+
+Il est primordial pour l’attaquant de pouvoir traquer les bugs et analyser la mémoire, c’est là qu'interviennent les debuggers comme : GDB, Windbg, immunity debugger, x64dbg.
+
+
+
 ## # [ELF x86 - Stack buffer and integer overflow](ELF x86 - Stack buffer and integer overflow)
 
 Lien du challenge: [Challenges/App - Système : ELF x86 - Stack buffer and integer overflow [Root Me : plateforme d'apprentissage dédiée au Hacking et à la Sécurité de l'Information]](https://www.root-me.org/fr/Challenges/App-Systeme/ELF-x86-Stack-buffer-and-integer-overflow)
